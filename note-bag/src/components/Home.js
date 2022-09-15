@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import NbNavbar from './NbNavbar';
 
 function Home() {
-  const apiUrl = "https://localhost:7292/api/Notes";
+  const apiUrl = process.env.REACT_APP_API_URL;
   const [notes, setNotes] = useState([]);
   const [activeNote, setActiveNote] = useState(null);
 
